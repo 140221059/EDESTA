@@ -1,0 +1,87 @@
+﻿@model IEnumerable<ContosoSite.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div>
+    @Html.ActionLink("List of students", "Index", "Students")<br />
+    @Html.ActionLink("List of enrollments", "Index", "Enrollments")
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.users_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.users_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.users_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.users_password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.users_dob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.users_country_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.users_credits)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.users_diseases)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.users_mobility)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.users_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.users_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.users_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.users_password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.users_dob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.users_country_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.users_credits)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.users_diseases)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.users_mobility)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.users_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.users_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.users_id })
+        </td>
+    </tr>
+}
+
+</table>

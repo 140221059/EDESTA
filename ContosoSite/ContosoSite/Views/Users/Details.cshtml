@@ -1,0 +1,90 @@
+﻿@model ContosoSite.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.users_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.users_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.users_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.users_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.users_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.users_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.users_password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.users_password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.users_dob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.users_dob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.users_country_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.users_country_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.users_credits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.users_credits)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.users_diseases)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.users_diseases)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.users_mobility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.users_mobility)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.users_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
